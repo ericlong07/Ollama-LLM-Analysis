@@ -98,8 +98,26 @@ In summary, while **Llama 3.2** provided a decent response quickly, **Mistral** 
 <img width="924" alt="image" src="https://github.com/user-attachments/assets/ea1b0879-e15f-4378-90d1-f35c781d2a55">
 
 ### Summary
+| Model         | Response                                                                                                                                                      | Quality | Speed     | Resource Usage |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-----------|----------------|
+| Llama 3.2     | ```def calculate_average(numbers):    if not numbers:        raise ValueError("Cannot calculate average of an empty list")    return sum(numbers) / len(numbers)``` | Works   | 16.525s   | 0% CPU        |
+| Mistral       | ```def calculate_average(numbers):    return sum(numbers) / len(numbers)```                                                                 | Works   | 57.052s   | 0% CPU        |
+| Phi 3 Medium  | ```def calculate_average(numbers):    if len(numbers) == cuolonge:        return sum(numbers) / len(numbers)```                          | Error   | 1m10.14s  | 0% CPU        |
 
+- **Response Quality**:
+  - **Llama 3.2**: The function works correctly and includes a check for empty lists, raising a ValueError when necessary. This additional error handling makes it robust for real-world usage.
+  - **Mistral**: The function is concise and works correctly, but it lacks the error handling present in Llama 3.2. This could lead to issues if called with an empty list, potentially resulting in a division by zero error.
+  - **Phi 3 Medium**: The function contains a critical error in the condition `if len(numbers) == cuolonge`, where `cuolonge` is likely a typo or undefined variable. As a result, the function does not work, demonstrating a significant flaw in its implementation.
 
+- **Speed**:
+  - **Llama 3.2**: Completed the task in 16.525 seconds, indicating efficient processing for the provided function.
+  - **Mistral**: Took significantly longer at 57.052 seconds, which may be due to overhead in processing or additional checks.
+  - **Phi 3 Medium**: Was the slowest at 1 minute and 10.14 seconds, yet it still got the code wrong.
+
+- **Resource Usage**:
+  - All models demonstrated similar resource usage, with 0% CPU consumption during execution, indicating that the functions were efficient in terms of resource utilization.
+
+In summary, **Llama 3.2** provided a well-rounded solution with error handling and fast execution, making it the most effective model for calculating the average of a list. **Mistral** offered a functional response but lacked important error checks, while **Phi 3 Medium** encountered a critical error that rendered its function ineffective. The differences in speed further emphasize Llama 3.2's efficiency in performance.
 
 ## d) Creative Writing
 **Prompt**: Write a one stanza poem about writing a poem.
