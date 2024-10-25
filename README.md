@@ -268,25 +268,117 @@ We will ask the model to explain what a heart attack is to three different audie
 
 # 4) Analysis of Strengths and Weaknesses
 
+## Llama 3.2 Strengths:
+- Consistently fastest response times across all tests
+- Excellent performance in basic tasks requiring quick, straightforward answers
+- Strong error handling in code generation
+- Effective at adapting language complexity for different audiences
+- Minimal resource usage despite quick processing
+
+## Llama 3.2 Weaknesses:
+- Sometimes sacrifices accuracy for speed (e.g., counting r's in "strawberry")
+- Less sophisticated in creative writing tasks
+- Limited depth in complex explanations
+- Simpler vocabulary and structure compared to larger models
+
+## Mistral Strengths:
+- Most accurate in basic fact-checking tasks
+- Produces sophisticated and nuanced responses
+- Excellent balance of technical accuracy and accessibility
+- Strong performance in creative writing
+- Consistent quality across different types of tasks
+
+## Mistral Weaknesses:
+- Significantly slower than Llama 3.2
+- Sometimes produces overly verbose responses
+- Basic code lacks error handling
+- Can be too technical for simpler audiences
+
+## Phi 3 Medium Strengths:
+- Produces complex, sophisticated outputs
+- Strong metaphorical thinking (e.g., traffic jam analogy)
+- Good at maintaining consistent tone
+- Detailed technical explanations when needed
+
+## Phi 3 Medium Weaknesses:
+- Slowest response times across all tests
+- Occasional critical errors in code generation
+- Inconsistent performance across tasks
+- Can be overly brief in situations requiring depth
 
 # 5) Insights about Open-Source LLMs
 
+1. **Size-Performance Correlation**
+   - Larger models don't necessarily perform better
+   - Mistral (7B) often outperformed Phi 3 Medium (14B)
+   - Smaller models like Llama 3.2 (3B) can be surprisingly effective
+
+2. **Speed-Accuracy Tradeoff**
+   - Faster models tend to make more mistakes
+   - Slower processing often correlates with more thoughtful responses
+   - The "sweet spot" varies depending on the use case
+
+3. **Resource Efficiency**
+   - All models showed minimal CPU usage despite size differences
+   - Memory footprint correlates directly with model size
+   - Local deployment is viable even on consumer hardware
+
+4. **Specialization vs. Generalization**
+   - Smaller models can excel in specific tasks
+   - Larger models show more consistent performance across diverse tasks
+   - Task-specific fine-tuning might be more important than model size
 
 # 6) Practical Implications of Findings
 
+1. **Model Selection Criteria**
+   - For quick, simple tasks: Llama 3.2
+   - For balanced performance: Mistral
+   - For complex, specialized tasks: Consider task-specific requirements over model size
 
-# 7) Challenges I Encountered
+2. **Resource Considerations**
+   - Hardware requirements are predictable based on model size
+   - CPU usage is less critical than available RAM
+   - Consider download size and storage requirements in deployment planning
 
+3. **Use Case Optimization**
+   - Match model to task requirements:
+     - Customer service: Mistral (balance of speed and accuracy)
+     - Code generation: Llama 3.2 (quick responses with error handling)
+     - Technical writing: Phi 3 Medium or Mistral (sophisticated outputs)
+     - Educational content: Model selection based on audience level
+
+4. **Deployment Strategies**
+   - Consider running multiple models for different tasks
+   - Implement fallback options for critical applications
+   - Balance between response time and accuracy requirements
+
+# 7) Challenges Encountered
+
+1. **Technical Challenges**
+   - Initial setup and configuration complexities
+   - Resource management on limited hardware
+   - Ensuring consistent testing conditions
+   - Managing varying response times
+
+2. **Evaluation Challenges**
+   - Subjectivity in assessing creative outputs
+   - Difficulty in standardizing quality metrics
+   - Balancing quantitative and qualitative measures
+   - Accounting for response variability
+
+3. **Methodological Challenges**
+   - Maintaining consistent testing conditions
+   - Ensuring fair comparisons across models
+   - Developing appropriate test cases
+   - Standardizing evaluation criteria
+
+4. **Resource Limitations**
+   - Hardware constraints affecting larger models
+   - Time required for comprehensive testing
+   - Storage requirements for multiple models
+   - Processing power limitations
 
 # Conclusion
 
-
-
-
-
-
-
-
-
-
+This comprehensive evaluation of three open-source LLMs reveals distinct characteristics and optimal use cases for each model. Llama 3.2, despite its smaller size, proves exceptionally efficient for quick tasks and basic operations, making it ideal for applications where speed is crucial. Mistral emerges as a well-rounded performer, offering the best balance between accuracy, sophistication, and response time. Phi 3 Medium demonstrates that larger models don't necessarily guarantee better performance across all tasks. The key finding for practitioners is the importance of matching model selection to specific use cases rather than assuming larger models are always better, as each model shows unique strengths that can be leveraged effectively when properly matched to the application requirements.
 
