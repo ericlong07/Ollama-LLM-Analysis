@@ -64,9 +64,41 @@ Overall, **Mistral** delivered the correct answer but at a higher latency, while
 <img width="884" alt="image" src="https://github.com/user-attachments/assets/731c491f-0c55-4194-bbee-9968586efa99">
 
 ### Summary
+| Model         | Response                                                                                                                                                                                                                                                                                                                                                  | Quality | Speed     | Resource Usage |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|-----------|----------------|
+| Llama 3.2     | The Amazon rainforest is vital for regulating the global climate and supporting a vast array of plant and animal life. It absorbs significant amounts of carbon dioxide, but deforestation threatens its survival due to agriculture and logging.                                                                                                     | Decent  | 14.541s   | 0% CPU        |
+| Mistral       | The Amazon Rainforest, often referred to as the “lungs of the Earth,” plays a significant role in regulating the global climate by absorbing carbon dioxide and aiding in combating climate change. Spanning over 5.5 million square kilometers, it houses a vast array of plant and animal species. However, the rainforest faces threats due to deforestation caused by agriculture and logging activities, leading to habitat loss and reduced biodiversity. The importance of conservation measures is emphasized to protect this vital resource. | Almost as long as the original text | 43.034s | 0% CPU        |
+| Phi 3 Medium  | The Amazon rainforest is essential for global climate regulation and contains diverse flora and fauna over 5.5 million sq km; however, deforestation due to agriculture and logging endangers its biodiversity. Preservation efforts are necessary to safeguard this vital resource.                                                                                 | Effective | 1m2.79s  | 0% CPU        |
 
+- **Response Quality**:
+  - **Llama 3.2**: Provided a decent overview of the Amazon rainforest's importance, focusing on its role in climate regulation and the threat posed by deforestation. However, it lacks depth compared to the other models.
+  - **Mistral**: Delivered a comprehensive response, emphasizing the rainforest's significance as the "lungs of the Earth" and detailing its vast area and biodiversity. It also highlights the importance of conservation measures, making it very informative.
+  - **Phi 3 Medium**: Offered an effective summary that captures the essential points regarding climate regulation, biodiversity, and the need for preservation efforts. While concise, it successfully communicates the key information without being overly verbose.
+
+- **Speed**:
+  - **Llama 3.2**: Generated the response in 14.541 seconds, which is relatively quick compared to the other models.
+  - **Mistral**: Took longer at 43.034 seconds, likely due to its more elaborate response that included detailed explanations and examples.
+  - **Phi 3 Medium**: The slowest at 1 minute and 2.79 seconds, despite its concise response, indicating possible overhead in processing.
+
+- **Resource Usage**:
+  - All models demonstrated similar resource usage, with 0% CPU consumption during execution, suggesting efficient processing across the board.
+
+In summary, while **Llama 3.2** provided a decent response quickly, **Mistral** offered a more detailed summary that was almost too similar to the original text. **Phi 3 Medium** was effective in its brevity but took the longest to generate a response. All models used minimal resources, indicating good efficiency. Depending on the context, **Mistral** may be preferable for re-wording, while **Llama 3.2** and **Phi 3 Medium** might be more suitable for actual summarization.
 
 ## c) Simple Code Generation
+**Prompt**: Write a simple Python function that takes a list of numbers as input and returns the average of those numbers.
+
+### Llama 3.2 Output
+<img width="948" alt="image" src="https://github.com/user-attachments/assets/3d17e4d2-d479-435a-8448-3d07557a1463">
+
+### Mistral Output
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/97de537f-da0e-4635-be44-9df24146a382">
+
+### Phi 3 Medium Output
+<img width="924" alt="image" src="https://github.com/user-attachments/assets/ea1b0879-e15f-4378-90d1-f35c781d2a55">
+
+### Summary
+
 
 
 ## d) Creative Writing
